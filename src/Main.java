@@ -39,21 +39,16 @@ public class Main {
     public static Employee findEmployeeWithMinSalary() {
         Employee result = employees[0];
         for (int i = 1; i < employees.length; i++) {
-            if (employees[i] != null && employees[i].getSalary() < employees[i - 1].getSalary()) {
+            if (employees[i] != null && employees[i].getSalary() < result.getSalary()) {
                 result = employees[i];
             }
-        }
-        if (employees[0] != null && employees[0].getSalary() < result.getSalary()) {
-            result = employees[0];
         }
         return result;
     }
     public static Employee findEmployeeWithMaxSalary() {
         Employee result = employees[0];
-        double max = Double.NEGATIVE_INFINITY;
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null && employees[i].getSalary() > max) {
-                max = employees[i].getSalary();
+            if (employees[i] != null && employees[i].getSalary() > result.getSalary()) {
                 result = employees[i];
             }
         }
