@@ -20,9 +20,8 @@ public class Employee {
     }
 
     public int getDepartment() {
-        return getDepartment();
+        return department;
     }
-
     public int getSalary() {
         return salary;
     }
